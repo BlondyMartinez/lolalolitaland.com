@@ -13,14 +13,14 @@ import Clock from "public/icons/clock.svg"
     <Marquee content={Array(8).fill("Entradas")} />
   </div>
 
-  <div class="container mx-auto px-4 py-12">
-    <div class="mb-12 text-center">
-      <p class="mx-auto max-w-2xl text-lg text-balance text-white">
-        Elige el día que mejor se adapte a ti para vivir la experiencia Lola Lolita Land.
-      </p>
-    </div>
+  <div class="relative container mx-auto px-4 py-12">
+    <p
+      class="absolute inset-0 z-10 m-auto flex h-full w-full max-w-xl items-center justify-center text-center text-2xl font-semibold text-balance text-amber-200 text-shadow-[0_0_10px_#000]"
+    >
+      ¡Gracias por asistir al evento! ¡Hasta el año que viene!
+    </p>
 
-    <div class="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
+    <div class="pointer-events-none mx-auto grid max-w-4xl grid-cols-1 gap-8 blur md:grid-cols-2">
       <!-- Día 1: 14 de junio -->
       <div
         class="ticket-card group relative overflow-hidden rounded-[calc(var(--radius-lg)+1px)] rounded-t-[calc(2rem+1px)] border-0 bg-gradient-to-br from-white to-[#fff8fb] backdrop-blur-sm transition-all duration-300 hover:translate-y-[-5px] md:rounded-t-[calc(var(--radius-lg)+1px)] md:rounded-tl-[calc(2rem+1px)] md:rounded-bl-[calc(2rem+1px)]"
@@ -81,7 +81,7 @@ import Clock from "public/icons/clock.svg"
 
       <!-- Día 2: 15 de junio -->
       <div
-        class="ticket-card group relative overflow-hidden rounded-[calc(var(--radius-lg)+1px)] rounded-b-[calc(2rem+1px)] border-0 bg-gradient-to-br from-white to-[#fff8fb] backdrop-blur-sm transition-all duration-300 hover:translate-y-[-5px] md:rounded-tr-[calc(2rem+1px)] md:rounded-b-[calc(var(--radius-lg)+1px)] md:rounded-br-[calc(2rem+1px)]"
+        class="ticket-card group pointer-events-none relative overflow-hidden rounded-[calc(var(--radius-lg)+1px)] rounded-b-[calc(2rem+1px)] border-0 bg-gradient-to-br from-white to-[#fff8fb] backdrop-blur-sm transition-all duration-300 hover:translate-y-[-5px] md:rounded-tr-[calc(2rem+1px)] md:rounded-b-[calc(var(--radius-lg)+1px)] md:rounded-br-[calc(2rem+1px)]"
       >
         <div class="absolute inset-0 bg-gradient-to-br from-[#ff0695]/5 to-[#ff99d1]/10 opacity-50">
         </div>
@@ -142,12 +142,12 @@ import Clock from "public/icons/clock.svg"
   <style>
     .tickets-button {
       background-size: 200% 100%;
-      animation: shimmer 3s linear infinite;
+      /* animation: shimmer 3s linear infinite; */
       position: relative;
       overflow: hidden;
     }
 
-    .tickets-button::before {
+    /* .tickets-button::before {
       content: "";
       position: absolute;
       top: -50%;
@@ -157,7 +157,7 @@ import Clock from "public/icons/clock.svg"
       background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
       transform: rotate(30deg);
       animation: shine 3s linear infinite;
-    }
+    } */
 
     @keyframes shimmer {
       0% {
